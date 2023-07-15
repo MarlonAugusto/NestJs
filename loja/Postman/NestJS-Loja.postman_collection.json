@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "83d1471b-22d8-40a1-9209-9c1b29288f54",
+		"name": "NestJS/Loja",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "28333513"
+	},
+	"item": [
+		{
+			"name": "/api",
+			"item": [
+				{
+					"name": "/users",
+					"item": [
+						{
+							"name": "/Users",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Joao\",\r\n    \"email\": \"jao@mail.com\",\r\n    \"password\": \"0066600\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}users"
+							},
+							"response": []
+						},
+						{
+							"name": "/Users",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}users"
+							},
+							"response": []
+						},
+						{
+							"name": "/Users/id",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Cabrito Teves\",\r\n    \"email\": \"cabrito.teves@mail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}users/a753d59d-8f27-4a9b-a599-d6db6557edc4"
+							},
+							"response": []
+						},
+						{
+							"name": "/Users/id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Abraham Lincoln\",\r\n    \"email\": \"Abraham.Lincoln@mail.com\",\r\n    \"password\": \"1997.2003\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}users/a753d59d-8f27-4a9b-a599-d6db6557edc4"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "/api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{url}}"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:3000/api/"
+		}
+	]
+}
